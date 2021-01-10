@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookDetailPageComponent } from './book-detail-page.component';
+import { AuthpageComponent } from './authpage.component';
 
-describe('BookDetailPageComponent', () => {
-  let component: BookDetailPageComponent;
-  let fixture: ComponentFixture<BookDetailPageComponent>;
+describe('AuthpageComponent', () => {
+  let component: AuthpageComponent;
+  let fixture: ComponentFixture<AuthpageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookDetailPageComponent ]
+      declarations: [ AuthpageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BookDetailPageComponent);
+    fixture = TestBed.createComponent(AuthpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
