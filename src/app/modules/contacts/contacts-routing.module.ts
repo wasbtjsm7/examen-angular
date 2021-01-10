@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContactpageComponent } from './pages/contactpage/contactpage.component'
+import { ContactpageComponent } from './pages/contactpage/contactpage.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: ContactpageComponent
   }
 ];

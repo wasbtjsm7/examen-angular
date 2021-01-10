@@ -1,34 +1,39 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent} from './layout/layout.component'
+import { LayoutComponent } from './layout/layout.component';
+import { NotfoundComponent} from './core/notfound/notfound.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path:'',
+        path: '',
         redirectTo: 'home',
         pathMatch: 'full'
       },
       {
         path: 'home',
-        loadChildren: ()=> import('./modules/home/home.module').then( m => m.HomeModule)
+        loadChildren: () => import('./modules/home/home.module').then( m => m.HomeModule)
       },
       {
         path: 'course',
-        loadChildren: ()=> import('./modules/course/course.module').then( m => m.CourseModule)
+        loadChildren: () => import('./modules/course/course.module').then( m => m.CourseModule)
       },
       {
         path: 'contacts',
-        loadChildren: ()=> import('./modules/contacts/contacts.module').then( m => m.ContactsModule)
+        loadChildren: () => import('./modules/contacts/contacts.module').then( m => m.ContactsModule)
       },
       {
         path: 'admin',
-        loadChildren: ()=> import('./modules/admin/admin.module').then( m => m.AdminModule)
+        loadChildren: () => import('./modules/admin/admin.module').then( m => m.AdminModule)
       }
     ]
+  },
+  {
+    path: '**',
+    component: NotfoundComponent
   }
 ];
 

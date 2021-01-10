@@ -4,7 +4,7 @@ import { AuthpageComponent } from './pages/authpage/authpage.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: AuthpageComponent
   }
 ];

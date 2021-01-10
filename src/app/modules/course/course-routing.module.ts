@@ -4,7 +4,7 @@ import { CoursepageComponent } from './pages/coursepage/coursepage.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: CoursepageComponent
   }
 ];
