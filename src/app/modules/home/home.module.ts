@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
 import { TeacherContainerComponent } from './components/teacher-container/teacher-container.component';
 import { TopcourseContainerComponent } from './components/topcourse-container/topcourse-container.component';
+import { InstructorService } from './services/instructor.service';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ declarations: [
   imports: [
     CommonModule,
     HomeRoutingModule
-  ]
+  ],
+  providers:[InstructorService]
 })
 export class HomeModule { }

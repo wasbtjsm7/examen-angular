@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICurso } from '../../interfaces/icourse';
+import { CourseeService } from '../../services/course.service.service';
 
 @Component({
   selector: 'app-coursepage-container',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursepageContainerComponent implements OnInit {
 
-  constructor() { }
+  listCurso: ICurso[];
+
+  constructor(private instserv: CourseeService) { }
 
   ngOnInit(): void {
+    this.getcurso();
   }
+  getcurso(){
+    this.instserv.getCurso()
+     .subscribe((res: ICurso[]) => {
+       console.log(res);
+       
+         this.listCurso = res;
+     });
+ }
 
 }
