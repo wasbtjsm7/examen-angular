@@ -17,12 +17,12 @@ export class TeacherContainerComponent implements OnInit {
     this.getinstructor();
   }
 
-  getinstructor(){
+  getinstructor(): any {
      this.instserv.getinstructor()
       .subscribe((res: IInstructor[]) => {
         console.log(res);
-        
-          this.listInstructor = res;
+
+        this.listInstructor = res;
       });
   }
 

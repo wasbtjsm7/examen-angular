@@ -8,10 +8,10 @@ import { IInstructor } from '../interfaces/instructor';
 export class InstructorService {
   url = 'http://examen-nh.jcramireztello.com/api/v1/instructor/';
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient){ 
   }
 
-  getinstructor() {
+  getinstructor(): any {
     return this.http.get<IInstructor[]>(`${this.url}`);
   }
 

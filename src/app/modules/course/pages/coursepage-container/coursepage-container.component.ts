@@ -16,12 +16,12 @@ export class CoursepageContainerComponent implements OnInit {
   ngOnInit(): void {
     this.getcurso();
   }
-  getcurso(){
+  getcurso(): any{
     this.instserv.getCurso()
      .subscribe((res: ICurso[]) => {
        console.log(res);
        
-         this.listCurso = res;
+       this.listCurso = res;
      });
  }
 

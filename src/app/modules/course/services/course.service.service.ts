@@ -12,7 +12,7 @@ export class CourseeService {
 
   }
 
-  getCurso() {
+  getCurso(): any {
     return this.http.get<ICurso[]>(`${this.url}`);
   }
 
